@@ -58,4 +58,3 @@ Swarm fail đúng 1 trial (C-002, seed 55) vì tin số ngày trễ trong ticket
 - Đã truyền quote đầy đủ để tránh trừ hai lần ở T13, T14; dùng idempotency key kết hợp transaction để chạy lại sau crash không ghi trùng.
 - Với C-002 seed 55, single tin dữ liệu DB nên từ chối đúng, còn swarm tin số ngày trong ticket nên hoàn sai.
 - Các test liên quan đều pass.
-...
