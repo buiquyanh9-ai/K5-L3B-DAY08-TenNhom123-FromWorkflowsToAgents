@@ -27,9 +27,12 @@ Phần này nối tiếp phần mini research ở buổi lý thuyết (slide 62�
 
 ## Kết quả ablation
 
-- Lệnh đã chạy (copy nguyên văn):
-- Run id / file report:
-- Kết quả so với hypothesis (đúng / sai / không kết luận được), kèm số liệu:
+- Lệnh đã chạy (copy nguyên văn): `python -m lab8.benchmark --shapes workflow,single,orchestrator,swarm --cases data/public_claims.jsonl --seeds 11,22,33,44,55 --out reports/benchmark.json` (chạy trong `src/`)
+- Run id / file report: `src/reports/benchmark.json`, commit `8465072`. Trial duy nhất không pass: `R-swarm-C-002-s55` (`status resolved != denied`). Trial đối chứng cùng claim và seed: `R-workflow-C-002-s55`.
+- Kết quả so với hypothesis (đúng / sai / không kết luận được), kèm số liệu: [nhóm xác nhận đúng/sai theo dòng HYPOTHESIS]. Số liệu trên 14 claim × 5 seed = 70 trial mỗi shape, cùng MockLLM, tool, seed, corpus, giá và evaluator:
+  - swarm: 69/70 trial pass, pass rate 0.986, pass^5 0.929, variance 0.000816, seed 55 chỉ đạt 0.929 (các seed khác 1.000), cost/success 49.57.
+  - workflow: 70/70, pass rate 1.000, pass^5 1.000, variance 0, cost/success 27.86.
+  - Trial fail duy nhất của swarm là C-002 ở seed 55: status `resolved` trong khi nhãn là `denied` (claim T02, ticket ghi số ngày trễ khác cột `delay_days`).
 - Giới hạn: MockLLM không phải model sản xuất, latency là `unavailable`.
 
 Muốn đi xa hơn một ablation để lấy điểm cộng thì xem [docs/bonus_topics.md](../../docs/bonus_topics.md).
