@@ -53,6 +53,9 @@ Swarm fail đúng 1 trial (C-002, seed 55) vì tin số ngày trễ trong ticket
 
 ## 6. Tự đánh giá
 
-Gợi ý: mức độ hiểu ReAct / idempotency / trần theo đơn, phần nào làm tốt, phần nào còn dựa vào AI, nếu làm lại sẽ làm gì khác
-
+- Tự chạy test và đối chiếu với expected, quản lý repo nhóm, gộp TEAM.md khi bị conflict.
+- Model chỉ chọn công cụ đọc, code tính tiền và host kiểm duyệt trước khi ghi refund. 
+- Đã truyền quote đầy đủ để tránh trừ hai lần ở T13, T14; dùng idempotency key kết hợp transaction để chạy lại sau crash không ghi trùng.
+- Với C-002 seed 55, single tin dữ liệu DB nên từ chối đúng, còn swarm tin số ngày trong ticket nên hoàn sai.
+- Các test liên quan đều pass.
 ...
