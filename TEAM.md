@@ -2,10 +2,10 @@
 
 ## Thông tin nhóm
 
-- Tên nhóm:
+- Tên nhóm: TenNhom123
 - Lớp: L3B
-- Repo nhóm: `K5-L3B-DAY08-TenNhom-FromWorkflowsToAgents` (xem [SUBMISSION.md](SUBMISSION.md))
-- URL repo, nhánh nộp, commit chốt: `https://github.com/buiquyanh9-ai/K5-L3B-DAY08-TenNhom-FromWorkflowsToAgents`, nhánh `main`
+- Repo nhóm: `K5-L3B-DAY08-TenNhom123-FromWorkflowsToAgents` (xem [SUBMISSION.md](SUBMISSION.md))
+- URL repo, nhánh nộp, commit chốt: https://github.com/buiquyanh9-ai/K5-L3B-DAY08-TenNhom123-FromWorkflowsToAgents, nhánh `main`, commit chốt: (điền khi nộp)
 
 ## Thành viên
 
@@ -13,6 +13,7 @@
 | --: | ------ | ---- | ----- | ------ | ------- |
 |   1 | Lê Quý Toàn | 2A202603941 | lequytoanptit0303@gmail.com | ToanLee5433 | workflow + integration |
 |   2 | Nguyễn Thanh Tùng | 2A202603957 | thtung13102004@gmail.com | wewewewe07 | orchestrator + handoff |
+|   3 | Bùi Đình Quý Anh | 2A202603969 | buiquyanh9@gmail.com | buiquyanh9-ai | single agent |
 
 Gợi ý chia vai:
 
@@ -27,6 +28,7 @@ Gợi ý chia vai:
 | --- | --- | --- | --- |
 | Lê Quý Toàn | workflow + integration | c439bdc | tests/test_workflow_shape.py, tests/test_public_matrix.py (workflow: single-run 60/60, T11 retry, T12 crash) |
 | Nguyễn Thanh Tùng | orchestrator + handoff | 32b2417 | tests/test_orchestrator_custom.py, tests/test_public_matrix.py (orchestrator: single-run 60/60, T11 retry, T12 crash) |
+| Bùi Đình Quý Anh | single agent | f93d2ae | tests/test_single_shape.py, tests/test_public_matrix.py (single: single-run 60/60, T11 retry, T12 crash) |
 
 ## Cá nhân
 
@@ -87,4 +89,24 @@ Sao chép mục dưới đây cho từng thành viên.
 - Tests: `src/tests/test_orchestrator_custom.py` (5/5 passed).
 - Ma trận student: `python -m pytest -q -m student -o addopts= -k orchestrator` đạt 62/62 passed.
 - Báo cáo cá nhân chi tiết: `report/team/2A202603957_NguyenThanhTung.md`.
+
+## 2A202603969_BuiDinhQuyAnh
+
+### Phần việc phụ trách
+
+- Shape B: `src/lab8/shapes/single.py` (một agent ReAct, tối đa 8 bước, chỉ dùng tool đọc).
+- Người fork và quản lý repo nhóm.
+
+### Đóng góp cụ thể
+
+- Hiện thực shape single bằng `run_react`: model chỉ chọn tool đọc, số tiền lấy từ order row qua `compute_compensation`, không tin số liệu trong ticket.
+- Code của shape (không phải model) gọi `durability.issue_refund` với quote đầy đủ, forward `crash_at`, không bắt `InjectedCrash`.
+- Thêm `src/tests/test_single_shape.py`: bỏ qua delay ghi trong ticket ở cả 5 seed (C-002), trace không lộ secret/PII (C-010), giữ trong step cap (C-014).
+
+### Bằng chứng
+
+- Code: `src/lab8/shapes/single.py`.
+- Tests: `src/tests/test_single_shape.py` (7/7 passed).
+- Ma trận student: `python -m pytest -q -m student -o addopts= -k single` đạt 62/62 passed cho shape single.
+- Báo cáo cá nhân chi tiết: `report/team/2A202603969_BuiDinhQuyAnh.md`.
 
