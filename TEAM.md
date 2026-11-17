@@ -112,3 +112,25 @@ Sao chép mục dưới đây cho từng thành viên.
 - Ma trận student: `python -m pytest -q -m student -o addopts= -k single` đạt 62/62 passed cho shape single.
 - Báo cáo cá nhân chi tiết: `report/team/2A202603969_BuiDinhQuyAnh.md`.
 
+
+## 2A202603996_TrinhNgocNinh
+
+### Phần việc phụ trách
+
+- Ledger và đánh giá (eval), kiểm tra ba shape sử dụng đúng cổng ghi tiền của host.
+- Chạy benchmark công khai, tự kiểm thử trên `student_drop/`, điền báo cáo quyết định kiến trúc (`decision_adr.md`).
+- Viết test suite `src/tests/test_ledger_shapes.py`.
+
+### Đóng góp cụ thể
+
+- Review cơ chế ledger, tính toán trần bồi thường và xử lý crash trên cả ba shape.
+- Chạy benchmark 4 shapes × 14 claims × 5 seeds và commit `src/reports/benchmark.json`.
+- Viết 8 nhóm test TC13–TC20 trong `src/tests/test_ledger_shapes.py` (30 lượt chạy) kiểm thử approval, idempotency và crash recovery.
+- Đề xuất lựa chọn kiến trúc Workflow trong `decision_adr.md` dựa trên dữ liệu định lượng (pass 100%, variance 0, chi phí tối ưu nhất 27.86 VND).
+
+### Bằng chứng
+
+- Code: `src/tests/test_ledger_shapes.py`.
+- Benchmark: `src/reports/benchmark.json`.
+- Báo cáo quyết định kiến trúc: `report/team/decision_adr.md`.
+- Báo cáo cá nhân chi tiết: `report/team/2A202603996_TrinhNgocNinh.md`.
