@@ -11,7 +11,7 @@
 
 ## 2. Phần việc phụ trách
 
-- **Vai trò:** Vai 3 — Orchestrator + Handoff (Chuyên viên Điều phối Đa tác tử & Ranh giới Bảo mật).
+- **Vai trò:** Orchestrator + Handoff.
 - **Mã nguồn chịu trách nhiệm:**
   - `src/lab8/shapes/orchestrator.py`: Hiện thực hóa toàn bộ Shape C (Orchestrator điều phối các read-only investigators).
   - `src/tests/test_orchestrator_custom.py`: Viết bộ unit test kiểm thử ranh giới Handoff, tính bảo mật không rò rỉ secret/PII, và các nhánh xử lý nghiệp vụ.
