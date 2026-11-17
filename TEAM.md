@@ -66,7 +66,7 @@ Sao chép mục dưới đây cho từng thành viên.
 - Kết quả test:
   + `tests/test_workflow_shape.py`: 16/16 passed.
   + `tests/test_public_matrix.py -k workflow`: 62/62 passed.
-  + `pytest -q`: 75/75 passed.
+  + `pytest -q`: 105/105 passed.
   + `reports/crash.json`: 20/20 safe points.
   + `lab8.check_submission`: shape workflow định dạng chuẩn và pass 12/12 claims ở seed 11.
 
