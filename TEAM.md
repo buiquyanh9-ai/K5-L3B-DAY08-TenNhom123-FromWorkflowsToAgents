@@ -14,6 +14,7 @@
 |   1 | Lê Quý Toàn | 2A202603941 | lequytoanptit0303@gmail.com | ToanLee5433 | workflow + integration |
 |   2 | Nguyễn Thanh Tùng | 2A202603957 | thtung13102004@gmail.com | wewewewe07 | orchestrator + handoff |
 |   3 | Bùi Đình Quý Anh | 2A202603969 | buiquyanh9@gmail.com | buiquyanh9-ai | single agent |
+|   4 | Trịnh Ngọc Ninh | 2A202603996 | ninh.trinh.dev@gmail.com | ninhtrinhdev | ledger + evaluation |
 
 Gợi ý chia vai:
 
@@ -29,6 +30,7 @@ Gợi ý chia vai:
 | Lê Quý Toàn | workflow + integration | c439bdc | tests/test_workflow_shape.py, tests/test_public_matrix.py (workflow: single-run 60/60, T11 retry, T12 crash) |
 | Nguyễn Thanh Tùng | orchestrator + handoff | 32b2417 | tests/test_orchestrator_custom.py, tests/test_public_matrix.py (orchestrator: single-run 60/60, T11 retry, T12 crash) |
 | Bùi Đình Quý Anh | single agent | f93d2ae | tests/test_single_shape.py, tests/test_public_matrix.py (single: single-run 60/60, T11 retry, T12 crash) |
+| Trịnh Ngọc Ninh | ledger + evaluation | 8465072 | tests/test_ledger_shapes.py (TC13–TC20: approval và ledger qua run_claim của 3 shape, 30 lượt chạy) |
 
 ## Cá nhân
 
