@@ -70,16 +70,21 @@ Sao chép mục dưới đây cho từng thành viên.
 
 ### Phần việc phụ trách
 
-- Orchestrator Shape (`src/lab8/shapes/orchestrator.py`).
-- Ranh giới bảo mật Handoff và điều phối read-only investigators.
+- Shape C: `src/lab8/shapes/orchestrator.py` (Orchestrator điều phối các read-only investigators).
+- Bảo đảm ranh giới bảo mật qua Handoff allowlist (`make_handoff`).
+- Viết test suite `src/tests/test_orchestrator_custom.py`.
 
 ### Đóng góp cụ thể
 
-- Hiện thực hóa Shape C (`src/lab8/shapes/orchestrator.py`) sử dụng `make_handoff` với allowlist nghiêm ngặt.
-- Viết bộ kiểm thử cá nhân `src/tests/test_orchestrator_custom.py` (5/5 tests passed).
-- Vượt qua 62/62 student tests cho shape orchestrator.
+- Hiện thực hóa toàn bộ logic Shape C: phân quyền Orchestrator duy nhất gọi `issue_refund`, investigators chỉ đọc.
+- Chặn write tools và lọc bỏ bí mật / PII khỏi Handoff facts và Trace.
+- Forward `crash_at` và đảm bảo an toàn khi crash (Crash safety).
+- Thêm 5 unit tests kiểm thử độc lập cho Orchestrator và Handoff.
 
 ### Bằng chứng
 
-- Báo cáo chi tiết: `report/team/2A202603957_NguyenThanhTung.md`.
-- File test: `src/tests/test_orchestrator_custom.py`.
+- Code: `src/lab8/shapes/orchestrator.py`.
+- Tests: `src/tests/test_orchestrator_custom.py` (5/5 passed).
+- Ma trận student: `python -m pytest -q -m student -o addopts= -k orchestrator` đạt 62/62 passed.
+- Báo cáo cá nhân chi tiết: `report/team/2A202603957_NguyenThanhTung.md`.
+
