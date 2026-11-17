@@ -5,7 +5,7 @@
 - Tên nhóm: TenNhom123
 - Lớp: L3B
 - Repo nhóm: `K5-L3B-DAY08-TenNhom123-FromWorkflowsToAgents` (xem [SUBMISSION.md](SUBMISSION.md))
-- URL repo, nhánh nộp, commit chốt: https://github.com/buiquyanh9-ai/K5-L3B-DAY08-TenNhom123-FromWorkflowsToAgents, nhánh `main`, commit chốt: (điền khi nộp)
+- URL repo, nhánh nộp, commit chốt: https://github.com/buiquyanh9-ai/K5-L3B-DAY08-TenNhom123-FromWorkflowsToAgents, nhánh `main`, commit chốt: `8465072`
 
 ## Thành viên
 

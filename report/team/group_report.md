@@ -4,9 +4,9 @@ Tối đa 5 trang ngoài phụ lục. Số liệu lấy từ file trong `src/rep
 
 ## 1. Thông tin nhóm
 
-- Tên nhóm:
+- Tên nhóm: TenNhom123
 - Thành viên: xem `TEAM.md`
-- Commit chốt (trùng `report/team/decision_adr.md`):
+- Commit chốt (trùng `report/team/decision_adr.md`): `8465072` (commit chứa `src/reports/benchmark.json`, bằng chứng của ADR). Các commit sau đó chỉ bổ sung test ledger (`tests/test_ledger_shapes.py`) và báo cáo, không đổi code shape.
 
 ## 2. Mục tiêu và cách tiếp cận
 
