@@ -4,10 +4,10 @@
 
 ## 1. Thông tin thành viên
 
-- Họ tên: [Điền họ và tên của bạn]
-- MSSV: [Điền MSSV của bạn]
-- Email: [Điền email của bạn]
-- GitHub: [Điền GitHub username của bạn]
+- Họ tên: Nguyễn Thanh Tùng
+- MSSV: 2A202603957
+- Email: thtung13102004@gmail.com
+- GitHub: [wewewewe07](https://github.com/wewewewe07)
 
 ## 2. Phần việc phụ trách
 
